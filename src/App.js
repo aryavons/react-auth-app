@@ -14,22 +14,6 @@ import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 import BoardShoppingCart from "./components/BoardShoppingCart";
 import EventBus from "./common/EventBus";
-import React, { useState, useEffect } from 'react';
-
-function App() {
-  const [data, setData] = useState('');
-
-  useEffect(() => {
-    (async function () {
-      const { text } = await( await fetch(`/api/message`)).json();
-      setData(text);
-    })();
-  });
-
-  return <div>{data}</div>;
-}
-
-export default App;
 
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
