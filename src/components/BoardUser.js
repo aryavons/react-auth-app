@@ -14,10 +14,10 @@ useEffect(() => {
   const fetchData = async () => {
     const currentUser = AuthService.getCurrentUser();
     const respOrders = await axios(
-      'http://localhost:8080/api/test/orderhistoryforuser?userID='+currentUser.id, { headers: authHeader() }
+      'https://ashy-desert-0f002c70f.2.azurestaticapps.net/api/test/orderhistoryforuser?userID='+currentUser.id, { headers: authHeader() }
     );
     const respProducts = await axios(
-      'http://localhost:8080/api/test/products', { headers: authHeader() }
+      'https://ashy-desert-0f002c70f.2.azurestaticapps.net/api/test/products', { headers: authHeader() }
     );
 
     setCombi({ orders: respOrders.data, productList: respProducts.data });
