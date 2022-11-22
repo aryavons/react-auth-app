@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/auth/";
+const API_URL = "https://ashy-desert-0f002c70f.2.azurestaticapps.net/api/auth/";
 
 const register = (username, email, password) => {
   return axios.post(API_URL + "signup", {
